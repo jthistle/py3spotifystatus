@@ -1,47 +1,47 @@
-# i3spotifystatus
+# i3spotifystatus - updated for py3status
 
-![screen](https://raw.githubusercontent.com/pradzio1/i3spotifystatus/master/res/scr.png)
+## About
 
-### About:
-i3 status isn't particularly the best status generator for i3bar in terms of customization. But it's my favourite, because it works, it's easy to use, and it's bundled with i3wm so I don't have to think about installing it. Feature that lack I've been missing the most that wasn't built into i3status was notifying about author and title of currently played song in spotify client. I have found some gists written by [@csssuf](https://github.com/csssuf), and they work well, but due to format of data outputed by i3status all of the information about colors of text was lost and i3bar was showing only monochromatic text.
+This is an updated verison of [rpieja's i3spotifystatus](https://github.com/rpieja/i3spotifystatus). It adds a widget to your py3status bar displaying the current Spotify song and artist, as well as the current progress through the song.
 
-i3spotifystatus is a tiny python (with even smaller bash script because I was too lazy) script that parses JSON outputed by i3status, adds information about song author and title and outputs it to i3bar.
+### Changes in this version
 
-### What you'll need:
-* DBus
-* [@csssuf](https://github.com/csssuf)'s awk script, you can find it [here](https://gist.github.com/csssuf/13213f23191b92a7ce77#file-spotify_song-awk)
-* Spotify client (obviously)
-* You'll need FontAwesome if you want to display spotify logo on the bar.
+* Changed output format of `pystatus.py` to work with py3status
+* Added song progress to widget
+* Updated colours to match current Spotify branding
+* Added `sendCommand.sh` script - this can be used to remotely control the Spotify player, for example through i3 mod keybindings
 
-### How to install:
+## Requirements
+* dbus
+* Spotify desktop app - web player is not enough
+* FontAwesome if you want Spotify logo in status bar
 
-* clone repository to your prefered location
-* in your i3 config file (usually placed in ~/.config/i3/) set `status_command` to `i3status | /path/to/your/pystatus.py` in `bar` section, like this:
+## Installation
 
-```
-bar {
-    status_command i3status | ~/Documents/GitHub/i3spotifystatus/pystatus.py
+* Clone repository to your preferred location
+* Update your `i3status.conf` with
+```conf
+order += "external_script"
+
+# ...
+
+external_script {
+    script_path = "/path/to/i3spotifystatus/pystatus.py"
+    cache_timeout = 1
 }
 ```
-
-If you are using i3-gaps, it will probably contain the `status_command i3status` already. You just have to add the pipe and the python script path after. 
-
-* in `i3status.conf` file (create one if you don't have any -> read i3status doc for more information) set `output_format = "i3bar"` inside the 'general' configuration, like this:
-
+* Optional: keybindings can be added through i3 `config` file, e.g.
 ```
-general {
-    ...
-    output_format = "i3bar"
-    ...
-}
+bindsym $mod+$alt+D exec /path/to/i3spotifystatus/sendCommand.sh playpause
+# etc.
 ```
 
-* Reload i3 configs (usually `Mod + Shift + R`, if you haven't changed it).
+## Credits
 
-Tip: If you are not sure how this whole thing works, you can comment your config files using `#` at the beginning of each line. This way it is easy to revert the changes.
+[Original i3spotifystatus](https://github.com/rpieja/i3spotifystatus) by [rpieja](https://github.com/rpieja).
 
-### Credits:
+Original credits:
+
 Script is based on sample wrapper commited on original i3status repository.
 
 Awk script by @csssuf.
-
