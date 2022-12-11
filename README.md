@@ -4,6 +4,24 @@
 
 This is an updated verison of [rpieja's i3spotifystatus](https://github.com/rpieja/i3spotifystatus). It adds a widget to your py3status bar displaying the current Spotify song and artist, as well as the current progress through the song.
 
+### Examples
+
+Widget with all config options on, while playing:
+
+![Widget with all config options on, while playing](./res/1.png)
+
+While paused (and demonstrating non-latin song titles):
+
+![While paused](./res/2.png)
+
+Showing truncation of long song titles:
+
+![Showing truncation of long song titles](./res/3.png)
+
+With song progress turned off:
+
+![With song progress turned off](./res/4.png)
+
 ### Changes in this version
 
 * Changed output format of `pystatus.py` to work with py3status
@@ -35,6 +53,10 @@ external_script {
 bindsym $mod+$alt+D exec /path/to/i3spotifystatus/sendCommand.sh playpause
 # etc.
 ```
+
+## Configuration
+
+There are some options you can set at the top of the `pystatus.py` script by editing it. They are documented in the script.
 
 ## Credits
 
