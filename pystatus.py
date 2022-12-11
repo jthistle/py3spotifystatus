@@ -39,10 +39,7 @@ def print_line(message):
     sys.stdout.flush()
 
 def seconds_to_time(timestamp):
-    try:
-        timestamp = int(timestamp)
-    except TypeError:
-        pass
+    timestamp = int(timestamp)
     secs = timestamp % 60
     mins = timestamp // 60
     return f"{mins:01}:{secs:02}"
