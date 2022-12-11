@@ -14,7 +14,7 @@ COLOUR_DOWN    = "#ff0000" # default "#ff0000"
 COLOUR_UNKNOWN = "#000000" # default "#000000"
 
 # Whether or not to display song progress
-SHOW_PROGRESS = False # default True
+SHOW_PROGRESS = True # default True
 
 # The character to use at the start of the widget. Defaults to FontAwesome Spotify logo character.
 START_CHAR = " " # default " "
