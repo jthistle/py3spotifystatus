@@ -1,4 +1,13 @@
-# i3spotifystatus - updated for py3status
+# py3spotifystatus - Spotify status widget for i3bar with py3status
+
+- [About](#about)
+  - [Examples](#examples)
+  - [Changes in this version](#changes-in-this-version)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Credits](#credits)
+
 
 ## About
 
@@ -28,8 +37,10 @@ With song progress turned off:
 * Added song progress to widget
 * Updated colours to match current Spotify branding
 * Added `sendCommand.sh` script - this can be used to remotely control the Spotify player, for example through i3 mod keybindings
+* Fixed multiple bugs with original version
 
 ## Requirements
+
 * dbus
 * Spotify desktop app - web player is not enough
 * FontAwesome if you want Spotify logo in status bar
