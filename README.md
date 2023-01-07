@@ -33,11 +33,12 @@ With song progress turned off:
 
 ### Changes in this version
 
-* Changed output format of `pystatus.py` to work with py3status
 * Added song progress to widget
+* Added podcast support
+* Added `sendCommand.sh` script, which can be used to remotely control the Spotify player, for example using i3 mod keybindings
+* Changed output format of `pystatus.py` to work with py3status
 * Updated colours to match current Spotify branding
-* Added `sendCommand.sh` script - this can be used to remotely control the Spotify player, for example through i3 mod keybindings
-* Fixed multiple bugs with original version
+* Fixed multiple bugs
 
 ## Requirements
 
