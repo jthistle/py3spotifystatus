@@ -3,7 +3,7 @@
         getline line
         if (line ~ /string "/) {
             sub(/.*string "/, "", line)
-            sub(/".*$/, "", line)
+            sub(/"\s*$/, "", line)
             print line
             break
         }
