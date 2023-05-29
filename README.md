@@ -42,9 +42,11 @@ With song progress turned off:
 
 ## Requirements
 
-* dbus
-* Spotify desktop app - web player is not enough
-* FontAwesome if you want Spotify logo in status bar
+* [py3status](https://py3status.readthedocs.io/en/latest/user-guide/installation/)
+* [Spotify desktop app](https://www.spotify.com/us/download/linux/) - web player is not enough
+* (optional) [FontAwesome for the desktop](https://fontawesome.com/download) if you want Spotify logo in status bar
+
+The other requirements are dbus and Python 3, which you shouldn't need to worry about since they come bundled with most distros. You also need [i3](https://i3wm.org), obviously.
 
 ## Installation
 
