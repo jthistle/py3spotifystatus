@@ -2,7 +2,6 @@
 
 ![The widget in operation](./res/banner.png)
 
-- [About](#about)
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Configuration](#configuration)
