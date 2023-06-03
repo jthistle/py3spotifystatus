@@ -1,44 +1,18 @@
-# py3spotifystatus - Spotify status widget for i3bar with py3status
-
-- [About](#about)
-  - [Examples](#examples)
-  - [Changes in this version](#changes-in-this-version)
-- [Requirements](#requirements)
-- [Installation](#installation)
-- [Configuration](#configuration)
-- [Credits](#credits)
-
-
-## About
-
-This is an updated verison of [rpieja's i3spotifystatus](https://github.com/rpieja/i3spotifystatus). It adds a widget to your py3status bar displaying the current Spotify song and artist, as well as the current progress through the song.
-
-### Examples
-
-Widget with all config options on, while playing:
+# py3spotifystatus - Spotify widget for py3status bar for i3 window manager
 
 ![Widget with all config options on, while playing](./res/1.png)
 
-While paused (and demonstrating non-latin song titles):
+- [About](#about)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Examples](#examples)
+- [Changes in this version](#changes-in-this-version)
+- [Credits](#credits)
 
-![While paused](./res/2.png)
+This is a widget for the py3status for i3 which displays the current Spotify song and artist, and the current progress through the song.
 
-Showing truncation of long song titles:
-
-![Showing truncation of long song titles](./res/3.png)
-
-With song progress turned off:
-
-![With song progress turned off](./res/4.png)
-
-### Changes in this version
-
-* Added song progress to widget
-* Added podcast support
-* Added `sendCommand.sh` script, which can be used to remotely control the Spotify player, for example using i3 mod keybindings
-* Changed output format of `pystatus.py` to work with py3status
-* Updated colours to match current Spotify branding
-* Fixed multiple bugs
+This is an updated verison of [rpieja's i3spotifystatus](https://github.com/rpieja/i3spotifystatus) (unmaintained since 2018). Bug reports and pull requests are welcome! I will attempt to respond as soon as possible.
 
 ## Requirements
 
@@ -62,7 +36,7 @@ external_script {
     cache_timeout = 1
 }
 ```
-* Optional: keybindings can be added through i3 `config` file, e.g.
+* (optional) keybindings can be added through i3 `config` file, e.g.
 ```
 bindsym $mod+$alt+D exec /path/to/i3spotifystatus/sendCommand.sh playpause
 # etc.
@@ -72,12 +46,42 @@ bindsym $mod+$alt+D exec /path/to/i3spotifystatus/sendCommand.sh playpause
 
 There are some options you can set at the top of the `pystatus.py` script by editing it. They are documented in the script.
 
+## Examples
+
+Widget with all config options on, while playing:
+
+![Widget with all config options on, while playing](./res/1.png)
+
+While paused (and demonstrating non-latin song titles):
+
+![While paused](./res/2.png)
+
+Showing truncation of long song titles:
+
+![Showing truncation of long song titles](./res/3.png)
+
+With song progress turned off:
+
+![With song progress turned off](./res/4.png)
+
+## Changes in this version
+
+In this version I:
+
+* Added song progress to widget
+* Added podcast support
+* Added `sendCommand.sh` script, which can be used to remotely control the Spotify player, for example using i3 mod keybindings
+* Changed output format of `pystatus.py` to work with py3status
+* Updated colours to match current Spotify branding
+* Fixed multiple bugs
+
 ## Credits
 
 [Original i3spotifystatus](https://github.com/rpieja/i3spotifystatus) by [rpieja](https://github.com/rpieja).
 
 Original credits:
 
-Script is based on sample wrapper commited on original i3status repository.
+>Script is based on sample wrapper commited on original i3status repository.
+>
+>Awk script by @csssuf.
 
-Awk script by @csssuf.
