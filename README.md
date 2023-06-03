@@ -1,6 +1,6 @@
 # py3spotifystatus - Spotify widget for py3status bar for i3 window manager
 
-![Widget with all config options on, while playing](./res/1.png)
+![The widget in operation](./res/banner.png)
 
 - [About](#about)
 - [Requirements](#requirements)
